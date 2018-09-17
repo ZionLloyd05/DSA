@@ -27,15 +27,24 @@ class LinkedList(object):
         return self.counter;
 
     def insertEnd(self, data):
+        self.counter += 1;
+
+        if self.head is None:
+            self.insertStart(data);
+            return;
+            
         newNode = Node(data);
         actualNode = self.head;
 
-        while self.nextNode is not None:
+        while actualNode.nextNode is not None:
             actualNode = actualNode.nextNode;
 
         actualNode.nextNode = newNode;
 
     def remove(self, data):
+
+        self.counter -= 1;
+        
         if data == self.head.data:
             self.head = self.head.nextNode;
         else:
