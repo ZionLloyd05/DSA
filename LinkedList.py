@@ -5,6 +5,14 @@ class LinkedList(object):
         self.head = None;
         self.counter = 0;
 
+    def traverseList(self):
+
+        actualNode = self.head;
+
+        while actualNode is not None:
+            print("%d " % actualNode.data);
+            actualNode = actualNode.nextNode;
+
     def insertStart(self, data):
         self.counter += 1;
 
