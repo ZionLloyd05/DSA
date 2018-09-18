@@ -3,8 +3,8 @@ from Node import Node
 class LinkedList(object):
     def __init__(self):
         self.head = None;
-        self.counter = 0;
-
+        self.counter = 0; #this is use to monitor the amount of data in our LinkedList
+    
     def traverseList(self):
 
         actualNode = self.head;
